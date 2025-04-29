@@ -14,7 +14,7 @@
 
     /* Container principal que define o fundo cinza */
     .content-container {
-        background-image: url(/img/fundo.png);
+        background-image: url(https://gomesducn.github.io/tropadocn/img/fundo.png);
         width: 100%;
         min-height: 100vh; /* Garante que ocupe toda a altura da tela */
         display: flex;
