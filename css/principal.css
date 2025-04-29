@@ -1,0 +1,484 @@
+.user-icon,body.loading {
+    overflow: hidden
+}
+
+.preloader,header {
+    position: fixed;
+    top: 0
+}
+
+#background-video,.user-icon img {
+    object-fit: cover
+}
+
+.center-text,.subtext {
+    font-family: Kanit,sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px
+}
+
+.discord-link,nav ul li a {
+    text-decoration: none;
+    color: #fff
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-image: url('img/fundo.png'); /* Caminho da imagem */
+    background-repeat: repeat; /* Evita repetição da imagem */
+    color: #fff;
+  }
+
+
+.preloader {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1.5s ease-out,visibility 0s 1.5s
+}
+
+.preloader img {
+    width: 120px;
+    animation: 2s forwards spin,2s 2s forwards fadeout
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in,visibility 0s 1.5s
+}
+
+.conteudo {
+    opacity: 0;
+    display: none;
+    transition: opacity 1.5s ease-in
+}
+
+.user-icon,header,nav,nav ul {
+    display: flex
+}
+
+body.loaded {
+    overflow: auto
+}
+
+.user-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
+    border: 1.5px solid #fff;
+    justify-content: center;
+    align-items: center
+}
+
+.user-icon img,header,nav ul li a:hover::after {
+    width: 100%
+}
+
+.user-icon img {
+    height: 100%;
+    border-radius: 50%
+}
+
+.logo-item a::after,.user-login::after,.user-login:hover::after {
+    content: none
+}
+
+header {
+    align-items: center;
+    padding: 10px 0;
+    background: 0 0;
+    z-index: 2;
+    justify-content: center
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: relative
+}
+
+.logo-item {
+    margin-right: 5px
+}
+
+.logo {
+
+    transition: transform .5s
+}
+
+.logo:hover {
+    transform: rotate(360deg)
+}
+
+nav {
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1
+}
+
+nav ul {
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0
+}
+
+nav ul li {
+    margin: 0 15px
+}
+
+nav ul li a {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 0;
+    position: relative;
+    transition: .3s
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width .3s;
+    transform: translateX(-50%)
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width:35px
+    }
+
+    nav ul li a {
+        font-size: 14px
+    }
+}
+
+#background-video,.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1
+}
+
+.text-container,nav ul li a.deluxe-opt {
+    background: linear-gradient(90deg,#fff 0,#d3d3d3 25%,#181818 50%,#c7c7c7 75%,#292929 100%);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 5s linear infinite rgbAnimation
+}
+
+@keyframes rgbAnimation {
+    0%,100% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: 100% 100%
+    }
+}
+
+.overlay {
+    background: rgba(0,0,0,.6)
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    text-align: center
+}
+
+.center-text {
+    font-size: 90px;
+    letter-spacing: -8px;
+    color: #fff;
+    margin: 0
+}
+
+.subtext {
+    font-size: 25px;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 700
+}
+
+.discord-link {
+    transition: color .3s
+}
+
+.discord-link i {
+    margin-right: -5px;
+    margin-top: -3px;
+    font-size: 25px;
+    vertical-align: middle
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
+@keyframes gradientAnimation {
+    0%,100% {
+        background-position: 0 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-image: url('img/fundo.png'); /* Caminho da imagem */
+    background-repeat: repeat; /* Evita repetição da imagem */
+    color: #fff;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .header h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  @font-face {
+    font-family: grafiti;
+    src: url(txt/Hesorder.ttf) format('truetype');
+    
+  }
+  @font-face {
+    font-family: papodez;
+    src: url(txt/Another\ Danger\ Slanted\ -\ Demo.ttf) format('truetype');
+    
+  }
+
+  .history {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .history h2:hover{
+transform:scale(1.1)
+}
+
+  .history h2 {
+    font-family:beba;
+    font-size: 40px;
+    color: #fff;
+
+  }
+
+  .history p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #ccc;
+  }
+.historyU {
+
+text-align: center;
+margin-bottom: 40px;
+}
+
+.historyU h2 {
+font-size: 40px;
+font-family: beba;
+color: #fff;
+}
+
+.historyU p {
+font-size: 18px;
+line-height: 1.6;
+max-width: 800px;
+margin: 20px auto;
+color: #ccc;
+}
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .team-member {
+    margin: 40px;
+    margin-top: -20px;
+    width: 250px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: rotate(356deg);
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .team-member:hover{
+    transform:scale(1.1)
+  }
+
+  .team-member .image-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+
+  .team-member img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  }
+
+  .team-member h3, .team-member p, .team-member .specialty {
+    font-size: 16px;
+    color: #bb0000;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+  }
+
+
+  .team-member h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .team-member p {
+    font-size: 14px;
+    color: #161616;
+    margin: 10px 0;
+  }
+
+  .team-member .specialty {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #1f1f1f;
+  }
+  @keyframes gradientMove {
+0% {
+  background-position: -100%;
+}
+100% {
+  background-position: 100%;
+}
+}
+
+  .texto-gradiente {
+    font-family: beba;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(90deg,#860000 0,#860000 25%,#181818 50%,#860000 75%,#292929 100%);
+background-size: 300% 300%;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: 10s linear infinite rgbAnimation
+}
+
+@keyframes rgbAnimation {
+0%,100% {
+    background-position: 0 0
+}
+
+50% {
+    background-position: 100% 100%
+}
+}
+.fonte-diferente {
+font-family: papodez;
+text-align: center;
+font-size: 40px;
+font-weight: bold;
+    background: linear-gradient(90deg,#860000 0,#860000 25%,#181818 50%,#860000 75%,#292929 100%);
+background-size: 300% 300%;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: 10s linear infinite rgbAnimation
+
+}
+footer {
+text-align: center;
+color: rgb(133, 133, 133);
+}
+
+footer a {
+color: #FFD700;
+text-decoration: none;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+.logo-item {
+margin-right: 5px
+}
+
+.logo {
+
+transform:scale(1.1)
+}
+
+.logo:hover {
+transform: rotate(360deg)
+}
+
+
+
